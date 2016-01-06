@@ -1,0 +1,54 @@
+///////////////////////////////////////////////////////////
+//  Datenbankverwaltung.h
+//  Implementation of the Class Datenbankverwaltung
+//  Created on:      10-Dez-2015 12:03:54
+//  Original author: Christoph Ritzer
+///////////////////////////////////////////////////////////
+#include <QtCore>
+#include <QtSql/QSqlDatabase>
+#include "Anwender.h" //enthält kategorie, zahlungsart, qstring, transaktion
+//#include "Kategorie.h" //enthält datum und datenbankverwaltung
+//#include <QString>
+
+#include "Kategorie.h"
+#include "Zahlungsart.h"
+#include "Transaktion.h"
+
+#include "Datum.h"
+
+//class Zahlungsart;
+//class Transaktion;
+class Anwender;
+//class Kategorie;
+class Administrator;
+
+#if !defined(EA_6D82E82C_E298_4308_8270_48BABA3B4B0B__INCLUDED_)
+#define EA_6D82E82C_E298_4308_8270_48BABA3B4B0B__INCLUDED_
+
+class Datenbankverwaltung
+{
+
+public:
+	Datenbankverwaltung();
+	virtual ~Datenbankverwaltung();
+
+    bool aendereKategorie(QString name, QString alterName);
+    void erstelleAnwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName);
+    void erstelleKategorie(QString name);
+    void erstelleTransaktion(int betrag, Datum datum, QString zahlungsart, QString quelle);
+    void erstelleZahlungsart(QString zahlungsart);
+    Administrator* getAdministrator();
+    Anwender* getAnwender();
+    Kategorie* getKategorie();
+    QList<Transaktion> getTransaktionen(Anwender* User, Datum startDatum, Datum endDatum, Kategorie* kategorie);
+    QList<Zahlungsart> getZahlungsart();
+    void loescheAnwender();
+    void loescheKategorie(QString name);
+    void loescheTransaktion(int betrag, Datum datum, QString bezeichnung, QString quelle);
+    void loescheZahlung(QString name);
+
+private:
+    QSqlDatabase Datenbank;
+
+};
+#endif // !defined(EA_6D82E82C_E298_4308_8270_48BABA3B4B0B__INCLUDED_)
