@@ -10,6 +10,8 @@
 #if !defined(EA_45BD5840_6F2A_4f7e_A528_67A7ED4674C8__INCLUDED_)
 #define EA_45BD5840_6F2A_4f7e_A528_67A7ED4674C8__INCLUDED_
 
+class Datenbankverwaltung;
+
 class Zahlungsart
 {
 
@@ -18,9 +20,13 @@ public:
     virtual ~Zahlungsart();
 
     Zahlungsart(QString name);
+    QString getName(){
+        return zahlungsart;
+    }
 
 private:
     QString zahlungsart;
+    Datenbankverwaltung* pDat;
 
 };
 #endif // !defined(EA_45BD5840_6F2A_4f7e_A528_67A7ED4674C8__INCLUDED_)

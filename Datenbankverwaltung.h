@@ -13,6 +13,8 @@
 #include "Kategorie.h"
 #include "Zahlungsart.h"
 #include "Transaktion.h"
+#include <QSqlQuery>
+
 
 #include "Datum.h"
 
@@ -35,12 +37,12 @@ public:
     bool aendereKategorie(QString name, QString alterName);
     void erstelleAnwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName);
     void erstelleKategorie(QString name);
-    void erstelleTransaktion(int betrag, Datum datum, QString zahlungsart, QString quelle);
+    void erstelleTransaktion(int betrag, Datum datum, int zahlungsartid, int kategorieid, QString zahlungsart, QString quelle);
     void erstelleZahlungsart(QString zahlungsart);
     Administrator* getAdministrator();
     Anwender* getAnwender();
-    Kategorie* getKategorie();
-    QList<Transaktion> getTransaktionen(Anwender* User, Datum startDatum, Datum endDatum, Kategorie* kategorie);
+    Kategorie getKategorie();
+    QList<Transaktion> getTransaktionen(Anwender* User, Datum startDatum, Datum endDatum);
     QList<Zahlungsart> getZahlungsart();
     void loescheAnwender();
     void loescheKategorie(QString name);

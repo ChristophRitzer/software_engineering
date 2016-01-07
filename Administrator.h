@@ -23,9 +23,12 @@ public:
     }
 
     virtual ~Administrator();
-
+private:
 	Kategorie *m_Kategorie;
 	Anwender *m_Anwender;
+    Datenbankverwaltung* db = new Datenbankverwaltung();
+
+public:
 
     void Anwenderanlegen(QString email, Datum geburtsdatum, QString passwort, QString vName, QString nName);
     void Anwenderloeschen(QString email);

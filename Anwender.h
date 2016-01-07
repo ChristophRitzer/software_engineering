@@ -22,12 +22,14 @@ class Datenbankverwaltung;
 class Anwender
 {
 
-public:
-	Anwender();
+private:
+
 	Zahlungsart *m_Zahlungsart;
 	Transaktion *m_Transaktion;
-	Datenbankverwaltung *m_Datenbankverwaltung;
+    Datenbankverwaltung *m_Datenbankverwaltung;
 
+public:
+    Anwender();
     Anwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName);
 	~Anwender();
 	void abmelden();

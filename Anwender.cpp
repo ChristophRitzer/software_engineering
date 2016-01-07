@@ -17,6 +17,8 @@ Anwender::Anwender(QString email, Datum geburtstag, QString passwort, QString vN
     Vorname = vName;
     kontostand = 0;
 
+   m_Datenbankverwaltung = new Datenbankverwaltung();
+
     eingeloggt = false;
     isAdmin = false;
 }
@@ -29,26 +31,31 @@ Anwender::~Anwender(){
 
 void Anwender::abmelden(){
     //Gute frage wie das realisiert wird
+    //Eventuell anwender löschen aber in db behalten
 }
 
 
 int Anwender::Abrechnunganzeigen(Datum anfang, Datum ende){
-
+    QList<Transaktion> transaktionen = m_Datenbankverwaltung->getTransaktionen(this,anfang,ende);//letzten Paramenter überarbeiten
 	return 0;
 }
 
 
 int Anwender::aenderPW(QString altPW, QString neuPW, QString neuPW2){
-
+    //Funktion zum Passwort ändern erstellen
 	return 0;
 }
 
 
 void Anwender::transaktion(int zahl, Zahlungsart zahlungsart, Datum datum, Kategorie kategorie, QString quelle, QString bezeichnung){
+    Transaktion *pTrans = new Transaktion(zahl,datum, quelle, bezeichnung);
+    m_Datenbankverwaltung->erstelleTransaktion(zahl,datum, 7,7,zahlungsart.getName(), quelle); //zahlungsartid und kategorieid müssen noch erfasst werden
     //Transaktion::Transaktion(zahl, datum, quelle, bezeichnung);
 }
 
 
 void Anwender::Zahlungsartanlegen(QString name){
     //Zahlungsart::Zahlungsart(name);
+    Zahlungsart* pZahl = new Zahlungsart(name);
+    m_Datenbankverwaltung->erstelleZahlungsart(name);
 }

@@ -15,7 +15,8 @@ Zahlungsart::Zahlungsart(){
 
 
 Zahlungsart::~Zahlungsart(){
-
+    pDat->loescheZahlung(zahlungsart);
+    delete this;
 }
 
 
@@ -23,12 +24,8 @@ Zahlungsart::~Zahlungsart(){
 
 
 Zahlungsart::Zahlungsart(QString name){
-    //zahlungsart = name;
-    //Datenbankverwaltung::erstelleZahlungsart(name);
+    zahlungsart = name;
+    pDat = new Datenbankverwaltung();
+    pDat->erstelleZahlungsart(name);
 }
 
-
-//Zahlungsart::~Zahlungsart(){
-   // delete::Zahlungsart;
-   // Datenbankverwaltung::loescheZahlung(name);
-//}

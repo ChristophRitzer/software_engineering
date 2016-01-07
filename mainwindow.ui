@@ -1,192 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>960</width>
-    <height>600</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
-  <property name="windowTitle">
+  <property name="windowTitle" >
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="windowdescription">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>831</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Hier findest du deine letzten Transaktionen!</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="text_transaktionenfiltern">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>60</y>
-      <width>441</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>meine Transaktionen filtern:</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView_transaktionen">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>911</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>911</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QRadioButton" name="radioButton_einnahmen">
-         <property name="text">
-          <string>nur einnahmen</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_ausgaben">
-         <property name="text">
-          <string>nur ausgaben</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QComboBox" name="kategorieauswahl"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="maximumSize">
-        <size>
-         <width>70</width>
-         <height>15</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Datum von</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDateEdit" name="dateEdit"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Datum bis</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDateEdit" name="dateEdit_2"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>510</y>
-      <width>541</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QPushButton" name="pushButton_neueEinnahmeerfassen">
-       <property name="text">
-        <string>neue Einnahme erfassen</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_neueausgabeerfassen">
-       <property name="text">
-        <string>neue Ausgabe erfassen</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_meinpasswortaendern">
-       <property name="text">
-        <string>mein Passwort ändern</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_meinezahlungsartenverwalten">
-       <property name="text">
-        <string>meine Zahlungsarten verwalten</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QPushButton" name="pushButtonfilterloeschen">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Filter löschen</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>171</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Hallo Ulrich!</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar" />
+  <widget class="QToolBar" name="mainToolBar" />
+  <widget class="QWidget" name="centralWidget" />
+  <widget class="QStatusBar" name="statusBar" />
  </widget>
- <layoutdefault spacing="6" margin="11"/>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
  <resources/>
  <connections/>
 </ui>
