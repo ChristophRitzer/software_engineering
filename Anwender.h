@@ -30,18 +30,18 @@ private:
 
 public:
     Anwender();
-    Anwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName);
+    Anwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName);
 	~Anwender();
 	void abmelden();
-	int Abrechnunganzeigen(Datum anfang, Datum ende);
+    int Abrechnunganzeigen(QString anfang, QString ende);
     int aenderPW(QString altPW, QString neuPW, QString neuPW2);
-    void transaktion(int zahl, Zahlungsart zahlungsart, Datum datum, Kategorie kategorie, QString quelle, QString bezeichnung);
+    void transaktion(int zahl, Zahlungsart zahlungsart, QString datum, Kategorie kategorie, QString quelle, QString bezeichnung);
     void Zahlungsartanlegen(QString name);
 
 protected:
 	bool eingeloggt;
     QString email;
-	Datum Geburtsdatum;
+    QString Geburtsdatum;
 	bool isAdmin;
     QString Kennwort;
 	/**

@@ -9,7 +9,7 @@
 
 
 //Konstruktor muss noch Admin anlegen können.
-Anwender::Anwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName){
+Anwender::Anwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName){
     Anwender::email = email;
     Geburtsdatum = geburtstag;
     Kennwort = passwort;
@@ -35,7 +35,7 @@ void Anwender::abmelden(){
 }
 
 
-int Anwender::Abrechnunganzeigen(Datum anfang, Datum ende){
+int Anwender::Abrechnunganzeigen(QString anfang, QString ende){
     QList<Transaktion> transaktionen = m_Datenbankverwaltung->getTransaktionen(this,anfang,ende);//letzten Paramenter überarbeiten
 	return 0;
 }
@@ -47,7 +47,7 @@ int Anwender::aenderPW(QString altPW, QString neuPW, QString neuPW2){
 }
 
 
-void Anwender::transaktion(int zahl, Zahlungsart zahlungsart, Datum datum, Kategorie kategorie, QString quelle, QString bezeichnung){
+void Anwender::transaktion(int zahl, Zahlungsart zahlungsart, QString datum, Kategorie kategorie, QString quelle, QString bezeichnung){
     Transaktion *pTrans = new Transaktion(zahl,datum, quelle, bezeichnung);
     m_Datenbankverwaltung->erstelleTransaktion(zahl,datum, 7,7,zahlungsart.getName(), quelle); //zahlungsartid und kategorieid müssen noch erfasst werden
     //Transaktion::Transaktion(zahl, datum, quelle, bezeichnung);

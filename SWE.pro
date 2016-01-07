@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     Datenbankverwaltung.cpp \
     Kategorie.cpp \
     Transaktion.cpp \
-    Zahlungsart.cpp
+    Zahlungsart.cpp \
+    einnahmeerfassen.cpp
 
 HEADERS  += mainwindow.h \
     Administrator.h \
@@ -29,6 +30,7 @@ HEADERS  += mainwindow.h \
     Kategorie.h \
     Transaktion.h \
     Zahlungsart.h \
-    Datum.h
+    einnahmeerfassen.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    einnahmeerfassen.ui

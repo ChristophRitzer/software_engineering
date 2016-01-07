@@ -16,7 +16,7 @@ Administrator::~Administrator(){
 
 
 
-void Administrator::Anwenderanlegen(QString email, Datum geburtsdatum, QString passwort, QString vName, QString nName){
+void Administrator::Anwenderanlegen(QString email, QString geburtsdatum, QString passwort, QString vName, QString nName){
     //Muss nachgeschlagen werden wie man den Konstruktor aufruf hier richtig realisiert
     //Anwender::Anwender(email, geburtsdatum, passwort, vName, nName);
 

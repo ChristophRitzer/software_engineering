@@ -30,7 +30,7 @@ private:
 
 public:
 
-    void Anwenderanlegen(QString email, Datum geburtsdatum, QString passwort, QString vName, QString nName);
+    void Anwenderanlegen(QString email, QString geburtsdatum, QString passwort, QString vName, QString nName);
     void Anwenderloeschen(QString email);
     void Kategorieanlegen(QString katName);
     bool Kategorieloeschen(QString katName);

@@ -10,7 +10,7 @@
 
 #include <QString>
 #include "Datenbankverwaltung.h"
-#include "Datum.h"
+//#include "Datum.h"
 //class Datenbankverwaltung;
 
 class Kategorie

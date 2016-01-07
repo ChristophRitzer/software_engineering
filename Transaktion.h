@@ -8,7 +8,7 @@
 #if !defined(EA_D656A92A_872D_46df_BB92_B64B1981094B__INCLUDED_)
 #define EA_D656A92A_872D_46df_BB92_B64B1981094B__INCLUDED_
 
-#include "Datum.h"
+//#include "Datum.h"
 #include "Zahlungsart.h"
 #include "Kategorie.h"
 #include <QString>
@@ -22,13 +22,13 @@ public:
 	Transaktion();
 	Kategorie *m_Kategorie;
 
-    Transaktion(int betrag, Datum datum, QString bezeichnung, QString quelle);
+    Transaktion(int betrag, QString datum, QString bezeichnung, QString quelle);
     ~Transaktion();
 
 private:
 	int Betrag;
     QString Bezeichnung;
-    Datum datum;
+    QString datum;
     QString Kategorie;
     QString Quelle;
     QString zahlungsart;

@@ -16,7 +16,7 @@
 #include <QSqlQuery>
 
 
-#include "Datum.h"
+//#include "Datum.h"
 
 //class Zahlungsart;
 //class Transaktion;
@@ -35,18 +35,18 @@ public:
 	virtual ~Datenbankverwaltung();
 
     bool aendereKategorie(QString name, QString alterName);
-    void erstelleAnwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName);
+    void erstelleAnwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName);
     void erstelleKategorie(QString name);
-    void erstelleTransaktion(int betrag, Datum datum, int zahlungsartid, int kategorieid, QString zahlungsart, QString quelle);
+    void erstelleTransaktion(int betrag, QString datum, int zahlungsartid, int kategorieid, QString zahlungsart, QString quelle);
     void erstelleZahlungsart(QString zahlungsart);
     Administrator* getAdministrator();
     Anwender* getAnwender();
     Kategorie getKategorie();
-    QList<Transaktion> getTransaktionen(Anwender* User, Datum startDatum, Datum endDatum);
+    QList<Transaktion> getTransaktionen(Anwender* User, QString startDatum, QString endDatum);
     QList<Zahlungsart> getZahlungsart();
     void loescheAnwender();
     void loescheKategorie(QString name);
-    void loescheTransaktion(int betrag, Datum datum, QString bezeichnung, QString quelle);
+    void loescheTransaktion(int betrag, QString datum, QString bezeichnung, QString quelle);
     void loescheZahlung(QString name);
 
 private:

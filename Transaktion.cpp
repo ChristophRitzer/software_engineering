@@ -16,7 +16,7 @@ Transaktion::Transaktion(){
 
 
 
-Transaktion::Transaktion(int betrag, Datum datum, QString bezeichnung, QString quelle){
+Transaktion::Transaktion(int betrag, QString datum, QString bezeichnung, QString quelle){
     Betrag = betrag;
     this->datum = datum;
     Bezeichnung = bezeichnung;

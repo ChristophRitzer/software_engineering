@@ -60,7 +60,7 @@ bool Datenbankverwaltung::aendereKategorie(QString name, QString alterName){
 }
 
 
-void Datenbankverwaltung::erstelleAnwender(QString email, Datum geburtstag, QString passwort, QString vName, QString nName){
+void Datenbankverwaltung::erstelleAnwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName){
     QSqlQuery query;
     query.prepare("INSERT INTO Anwender(email, geburtsdatum, kennwort, nachname, vorname, ktostand, isAdmin)"
                   "Values(:email , :geburtstag , :kennwort, :nachname , :vorname , :kontostand, :isAdmin)");
@@ -96,7 +96,7 @@ void Datenbankverwaltung::erstelleKategorie(QString name){
 }
 
 
-void Datenbankverwaltung::erstelleTransaktion(int betrag, Datum datum, int zahlungsartid, int kategorieid, QString quelle, QString email){
+void Datenbankverwaltung::erstelleTransaktion(int betrag, QString datum, int zahlungsartid, int kategorieid, QString quelle, QString email){
     QSqlQuery query;
     query.prepare("INSERT INTO Transaktion(transaktionID, betrag, bezeichnung, datum, quelle, zahlungsartID, kategorieID, email)"
                   "VALUES(:t_id, :Betrag, :Bezeichnung, :Datum, :Quelle, :z_ID, :k_ID, :email");
@@ -181,11 +181,13 @@ Kategorie Datenbankverwaltung::getKategorie(){
         {
             // in eineliste speichern mit name (und id)
         }
+    return NULL;
 }
 
 
-QList<Transaktion> Datenbankverwaltung::getTransaktionen(Anwender* User, Datum startDatum, Datum endDatum){
+QList<Transaktion> Datenbankverwaltung::getTransaktionen(Anwender* User, QString startDatum, QString endDatum){
     QSqlQuery query;
+    QList<Transaktion> p;
     query.prepare("SELECT transaktionID, betrag, bezeichnung, datum, quelle, zahlungsartID, kategorieID, email\
                      FROM Transaktion WHERE email=:email");
 
@@ -198,11 +200,13 @@ QList<Transaktion> Datenbankverwaltung::getTransaktionen(Anwender* User, Datum s
     {
         //Transaktionsliste erstellen
     }
+   return p;
 }
 
 
 QList<Zahlungsart> Datenbankverwaltung::getZahlungsart(){
     QSqlQuery query;
+    QList<Zahlungsart> p;
 
     query.prepare("SELECT zahlungsartID, zahlungsart FROM Zahlungsart WHERE email=:");
    // query.bindValue(name);
@@ -214,7 +218,7 @@ QList<Zahlungsart> Datenbankverwaltung::getZahlungsart(){
     {
         // in eineliste speichern entweder alle oder nur der angemeldete benutzer
     }
-
+    return p;
 }
 
 
@@ -242,7 +246,7 @@ void Datenbankverwaltung::loescheKategorie(QString name){
 }
 
 
-void Datenbankverwaltung::loescheTransaktion(int betrag, Datum datum, QString bezeichnung, QString quelle){
+void Datenbankverwaltung::loescheTransaktion(int betrag, QString datum, QString bezeichnung, QString quelle){
     QSqlQuery query;
     query.prepare("DELETE FROM Transaktion WHERE name=:name");
     //query.bindValue(name);
