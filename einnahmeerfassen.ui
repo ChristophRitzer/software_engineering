@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>960</width>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -24,6 +36,147 @@
    </property>
    <property name="text">
     <string>Einnahme erfassen</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_bezeichnung">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>51</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bezeichnung</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_betrag">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>96</y>
+     <width>32</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Betrag</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_datum">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>147</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Datum</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>140</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_Kategorie">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>69</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_kategorie">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>204</y>
+     <width>46</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kategorie</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_kategorie_2">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>242</y>
+     <width>57</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zahlungsart</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_Zahlungsart">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>240</y>
+     <width>69</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_bezeichnung">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>50</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_betrag">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>90</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_einnahmeerfassen">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>270</y>
+     <width>131</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Einnahme erfassen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_abbrechen">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>270</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Abbrechen</string>
    </property>
   </widget>
  </widget>

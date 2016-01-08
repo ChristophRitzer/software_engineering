@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>kategorienverwaltung</class>
+ <widget class="QDialog" name="kategorienverwaltung">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>600</y>
+     <width>960</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>änderungen speichern und zurück zur Startseite</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kategorien verwalten</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="listView_kategorien">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>130</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_kategorieanlegen">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>370</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kategorie anlegen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_kategorieanlegen">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>370</y>
+     <width>201</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kategorie anlegen</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_neuekategorie">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>370</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_speichernundzurck">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>510</y>
+     <width>241</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Änderungen speichern und zurück zur Startseite</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_nichtspeichernundzuruck">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>510</y>
+     <width>241</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Änderungen nicht speichern und zurück zur Startseite</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

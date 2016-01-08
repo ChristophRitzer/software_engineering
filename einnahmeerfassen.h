@@ -15,6 +15,11 @@ public:
     explicit einnahmeerfassen(QWidget *parent = 0);
     ~einnahmeerfassen();
 
+private slots:
+    void on_pushButton_abbrechen_clicked();
+
+    void on_pushButton_einnahmeerfassen_clicked();
+
 private:
     Ui::einnahmeerfassen *ui;
 };

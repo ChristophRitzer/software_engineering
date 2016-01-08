@@ -75,7 +75,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -131,7 +131,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -170,6 +170,45 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_benutzerverwalten">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>321</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Benutzer verwalten</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_kategorienverwalten">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>241</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kategorien verwalten</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_neuenadminbestimmen">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>10</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>neuen Admin bestimmen</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
