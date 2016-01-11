@@ -2,6 +2,7 @@
 #define KATEGORIENVERWALTUNG_H
 
 #include <QDialog>
+#include "Kategorie.h"
 
 namespace Ui {
 class kategorienverwaltung;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::kategorienverwaltung *ui;
+    Datenbankverwaltung* db;
 };
 
 #endif // KATEGORIENVERWALTUNG_H

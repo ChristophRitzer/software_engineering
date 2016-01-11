@@ -2,6 +2,8 @@
 #define NEUENADMINBESTIMMEN_H
 
 #include <QDialog>
+#include "Administrator.h"
+#include "Datenbankverwaltung.h"
 
 namespace Ui {
 class neuenadminbestimmen;
@@ -22,6 +24,8 @@ private slots:
 
 private:
     Ui::neuenadminbestimmen *ui;
+    Administrator* admin;
+    Datenbankverwaltung* db;
 };
 
 #endif // NEUENADMINBESTIMMEN_H

@@ -16,7 +16,10 @@ neuenadminbestimmen::~neuenadminbestimmen()
 void neuenadminbestimmen::on_pushButton_speichernundzurck_clicked()
 {
     //speichern
-
+    //Admin holen und isAdmin auf false ändern
+    //Dann den ausgewählten Anwender als admin bestimmen -> benötigen eine aendereAdmin funktion -> evtl get und set funktionen zu attributen
+    admin = db->getAdministrator();
+    //admin->
     //und zurück
     this->close();
 }

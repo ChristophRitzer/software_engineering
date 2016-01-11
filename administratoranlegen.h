@@ -2,6 +2,11 @@
 #define ADMINISTRATORANLEGEN_H
 
 #include <QDialog>
+#include "Datenbankverwaltung.h"
+#include "Administrator.h"
+
+class Administrator;
+class Datenbankverwaltung;
 
 namespace Ui {
 class administratoranlegen;
@@ -22,6 +27,8 @@ private slots:
 
 private:
     Ui::administratoranlegen *ui;
+    Administrator* admin;
+    Datenbankverwaltung* db;
 };
 
 #endif // ADMINISTRATORANLEGEN_H

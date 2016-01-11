@@ -17,11 +17,9 @@ Administrator::~Administrator(){
 
 
 void Administrator::Anwenderanlegen(QString email, QString geburtsdatum, QString passwort, QString vName, QString nName){
-    //Muss nachgeschlagen werden wie man den Konstruktor aufruf hier richtig realisiert
-    //Anwender::Anwender(email, geburtsdatum, passwort, vName, nName);
 
-    Anwender* pErst = new Anwender(email, geburtsdatum, passwort, vName, nName);
-    db->erstelleAnwender(email, geburtsdatum, passwort, vName, nName);
+    m_Anwender = new Anwender(email, geburtsdatum, passwort, vName, nName, false);
+    db->erstelleAnwender(email, geburtsdatum, passwort, vName, nName, false);
 }
 
 
@@ -34,7 +32,7 @@ void Administrator::Anwenderloeschen(QString email){
 void Administrator::Kategorieanlegen(QString katName){
     //Selbes Problem wie vorher -> Konstruktor aufruf so nicht möglich
     //Kategorie::Kategorie(katName);
-    Kategorie* kat = new Kategorie(katName);
+    m_Kategorie = new Kategorie(katName);
     db->erstelleKategorie(katName);
 }
 
@@ -47,5 +45,5 @@ bool Administrator::Kategorieloeschen(QString katName){
 
 void Administrator::neuesPasswort(QString email, QString passwort){
     //Anwender identifizieren und dann neues passwort vergeben
-    Anwender* pAn = db->getAnwender(); //Get Funktion benötigt parameter Funktion zum passwort ändern anlegen!
+    m_Anwender = db->getAnwender(); //Get Funktion benötigt parameter Funktion zum passwort ändern anlegen!
 }

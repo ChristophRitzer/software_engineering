@@ -13,19 +13,20 @@
 #include "Anwender.h"
 #include <QString>
 
+class Datenbankverwaltung;
 
-class Administrator : public Anwender
-{
+
+class Administrator : public Anwender {
 
 public:
-    Administrator(){
-        //Admin anlegen!
-    }
+    //Administrator() :Anwender(){}
+    Administrator(QString email, QString geburtsdatum, QString passwort, QString vName, QString nName)
+        :Anwender(email, geburtsdatum, passwort, vName, nName, true){} //Ruft den Basisklassenkonstruktor auf
 
     virtual ~Administrator();
 private:
-	Kategorie *m_Kategorie;
-	Anwender *m_Anwender;
+    Kategorie *m_Kategorie;
+    Anwender *m_Anwender;
     Datenbankverwaltung* db = new Datenbankverwaltung();
 
 public:

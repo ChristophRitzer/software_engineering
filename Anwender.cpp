@@ -9,7 +9,7 @@
 
 
 //Konstruktor muss noch Admin anlegen können.
-Anwender::Anwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName){
+Anwender::Anwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName, bool isAdmin){
     Anwender::email = email;
     Geburtsdatum = geburtstag;
     Kennwort = passwort;
@@ -20,7 +20,7 @@ Anwender::Anwender(QString email, QString geburtstag, QString passwort, QString 
    m_Datenbankverwaltung = new Datenbankverwaltung();
 
     eingeloggt = false;
-    isAdmin = false;
+    isAdmin = isAdmin;
 }
 
 

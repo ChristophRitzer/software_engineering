@@ -2,6 +2,7 @@
 #define BENUTZERVERWALTUNG_H
 
 #include <QDialog>
+#include "Datenbankverwaltung.h"
 
 namespace Ui {
 class benutzerverwaltung;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::benutzerverwaltung *ui;
+    Datenbankverwaltung* db;
 };
 
 #endif // BENUTZERVERWALTUNG_H

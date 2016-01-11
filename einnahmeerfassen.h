@@ -2,6 +2,8 @@
 #define EINNAHMEERFASSEN_H
 
 #include <QDialog>
+#include "Datenbankverwaltung.h"
+#include "Transaktion.h"
 
 namespace Ui {
 class einnahmeerfassen;
@@ -22,6 +24,7 @@ private slots:
 
 private:
     Ui::einnahmeerfassen *ui;
+    Datenbankverwaltung* db = new Datenbankverwaltung();
 };
 
 #endif // EINNAHMEERFASSEN_H

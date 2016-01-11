@@ -18,10 +18,10 @@
 
 //#include "Datum.h"
 
-//class Zahlungsart;
-//class Transaktion;
+class Zahlungsart;
+class Transaktion;
 class Anwender;
-//class Kategorie;
+class Kategorie;
 class Administrator;
 
 #if !defined(EA_6D82E82C_E298_4308_8270_48BABA3B4B0B__INCLUDED_)
@@ -35,7 +35,7 @@ public:
 	virtual ~Datenbankverwaltung();
 
     bool aendereKategorie(QString name, QString alterName);
-    void erstelleAnwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName);
+    void erstelleAnwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName, bool isAdmin);
     void erstelleKategorie(QString name);
     void erstelleTransaktion(int betrag, QString datum, int zahlungsartid, int kategorieid, QString zahlungsart, QString quelle);
     void erstelleZahlungsart(QString zahlungsart);
@@ -48,6 +48,9 @@ public:
     void loescheKategorie(QString name);
     void loescheTransaktion(int betrag, QString datum, QString bezeichnung, QString quelle);
     void loescheZahlung(QString name);
+    void leeren();
+    void erstelleTabellen();
+    void fuelleTabellen();
 
 private:
     QSqlDatabase Datenbank;

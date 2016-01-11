@@ -1,5 +1,6 @@
 #include "zahlungsartenverwalten.h"
 #include "ui_zahlungsartenverwalten.h"
+#include "Datenbankverwaltung.h"
 
 zahlungsartenverwalten::zahlungsartenverwalten(QWidget *parent) :
     QDialog(parent),
@@ -15,6 +16,9 @@ zahlungsartenverwalten::~zahlungsartenverwalten()
 
 void zahlungsartenverwalten::on_pushButton_neuezahlungsart_clicked()
 {
+    QString text = ui->lineEdit_neuezahlungsart->text();
+    Datenbankverwaltung *db = new Datenbankverwaltung();
+    db->erstelleZahlungsart(text);
     //zahlungsart anlegen
 }
 

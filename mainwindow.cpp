@@ -1,12 +1,4 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "einnahmeerfassen.h"
-#include "ausgabeerfassen.h"
-#include "passwortaendern.h"
-#include "zahlungsartenverwalten.h"
-#include "benutzerverwaltung.h"
-#include "kategorienverwaltung.h"
-#include "neuenadminbestimmen.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :

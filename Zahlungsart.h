@@ -5,12 +5,13 @@
 //  Original author: 51957
 ///////////////////////////////////////////////////////////
 
-#include <QString>
-
 #if !defined(EA_45BD5840_6F2A_4f7e_A528_67A7ED4674C8__INCLUDED_)
 #define EA_45BD5840_6F2A_4f7e_A528_67A7ED4674C8__INCLUDED_
 
-class Datenbankverwaltung;
+#include <QString>
+#include "Datenbankverwaltung.h"
+
+//class Datenbankverwaltung;
 
 class Zahlungsart
 {

@@ -8,12 +8,12 @@
 #if !defined(EA_D656A92A_872D_46df_BB92_B64B1981094B__INCLUDED_)
 #define EA_D656A92A_872D_46df_BB92_B64B1981094B__INCLUDED_
 
-//#include "Datum.h"
 #include "Zahlungsart.h"
 #include "Kategorie.h"
 #include <QString>
 
 class Kategorie;
+class Zahlungsart;
 
 class Transaktion
 {

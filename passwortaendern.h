@@ -2,6 +2,8 @@
 #define PASSWORTAENDERN_H
 
 #include <QDialog>
+#include "Anwender.h"
+#include "Datenbankverwaltung.h"
 
 namespace Ui {
 class passwortaendern;
@@ -22,6 +24,8 @@ private slots:
 
 private:
     Ui::passwortaendern *ui;
+    Anwender* an;
+    Datenbankverwaltung* db;
 };
 
 #endif // PASSWORTAENDERN_H

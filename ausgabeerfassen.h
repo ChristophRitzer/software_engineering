@@ -2,6 +2,8 @@
 #define AUSGABEERFASSEN_H
 
 #include <QDialog>
+#include "Datenbankverwaltung.h"
+#include "Transaktion.h"
 
 namespace Ui {
 class ausgabeerfassen;
@@ -22,6 +24,7 @@ private slots:
 
 private:
     Ui::ausgabeerfassen *ui;
+    Datenbankverwaltung* db = new Datenbankverwaltung();
 };
 
 #endif // AUSGABEERFASSEN_H

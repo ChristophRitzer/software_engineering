@@ -11,13 +11,14 @@
 #include "Kategorie.h"
 #include "Zahlungsart.h"
 #include "Transaktion.h"
+#include "Datenbankverwaltung.h"
 #include <QString>
 
 class Transaktion;
 class Kategorie;
 class Zahlungsart;
 
-class Datenbankverwaltung;
+//class Datenbankverwaltung;
 
 class Anwender
 {
@@ -30,7 +31,7 @@ private:
 
 public:
     Anwender();
-    Anwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName);
+    Anwender(QString email, QString geburtstag, QString passwort, QString vName, QString nName, bool isAdmin);
 	~Anwender();
 	void abmelden();
     int Abrechnunganzeigen(QString anfang, QString ende);
