@@ -22,9 +22,9 @@
   <widget class="QLabel" name="txtlbl_passwortaendern">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>321</width>
+     <x>40</x>
+     <y>190</y>
+     <width>141</width>
      <height>16</height>
     </rect>
    </property>
@@ -35,8 +35,8 @@
   <widget class="QLineEdit" name="lineEdit_neueskennwort">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>30</y>
+     <x>210</x>
+     <y>190</y>
      <width>511</width>
      <height>20</height>
     </rect>
@@ -66,6 +66,52 @@
    </property>
    <property name="text">
     <string>kennwort nicht speichern und zurück</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>altes passwort eingeben</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_altespasswort">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>140</y>
+     <width>511</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtlbl_passwortaendern_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>230</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>neues kennwort erneut eingeben</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_neueskennworterneuteingeben">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>230</y>
+     <width>511</width>
+     <height>20</height>
+    </rect>
    </property>
   </widget>
  </widget>

@@ -79,3 +79,13 @@ void MainWindow::on_pushButton_neuenadminbestimmen_clicked()
     neuenadminbestimmen.exec();
 
 }
+
+void MainWindow::on_pushButton_einnahmenfiltern_clicked()
+{
+    //einnahmen filtern button
+}
+
+void MainWindow::on_pushButton_filterloeschen_clicked()
+{
+    //filter löschen?? soll mer
+}

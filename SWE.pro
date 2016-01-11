@@ -28,7 +28,8 @@ SOURCES += main.cpp\
     benutzerverwaltung.cpp \
     zahlungsartenverwalten.cpp \
     kategorienverwaltung.cpp \
-    neuenadminbestimmen.cpp
+    neuenadminbestimmen.cpp \
+    login.cpp
 
 HEADERS  += mainwindow.h \
     Administrator.h \
@@ -44,7 +45,8 @@ HEADERS  += mainwindow.h \
     benutzerverwaltung.h \
     zahlungsartenverwalten.h \
     kategorienverwaltung.h \
-    neuenadminbestimmen.h
+    neuenadminbestimmen.h \
+    login.h
 
 FORMS    += mainwindow.ui \
     einnahmeerfassen.ui \
@@ -54,4 +56,5 @@ FORMS    += mainwindow.ui \
     benutzerverwaltung.ui \
     zahlungsartenverwalten.ui \
     kategorienverwaltung.ui \
-    neuenadminbestimmen.ui
+    neuenadminbestimmen.ui \
+    login.ui

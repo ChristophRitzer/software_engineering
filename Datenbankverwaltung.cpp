@@ -201,7 +201,6 @@ Anwender* Datenbankverwaltung::getAnwender(){
 
 Kategorie Datenbankverwaltung::getKategorie(){
     QSqlQuery query;
-
     query.prepare("SELECT kategorieID, kategorie FROM Kategorie");
 
 
@@ -212,7 +211,8 @@ Kategorie Datenbankverwaltung::getKategorie(){
         {
             // in eineliste speichern mit name (und id)
         }
-
+    //musst ich machen sonst funktioniets nicht ->
+     return "hallo";
 }
 
 

@@ -41,6 +41,10 @@ private slots:
 
     void on_pushButton_neuenadminbestimmen_clicked();
 
+    void on_pushButton_einnahmenfiltern_clicked();
+
+    void on_pushButton_filterloeschen_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
